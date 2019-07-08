@@ -1,0 +1,787 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Project 5</title>
+
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+
+        }
+
+        #head {
+            font-family: "New Times Roman";
+            font-size: 24px;
+
+        }
+
+        h1 {
+            text-decoration-line: overline underline;
+        }
+
+        th,
+        td {
+            padding: 8px 10px 8px 10px;
+
+        }
+
+        th {
+            text-transform: uppercase;
+            font-size: 90%;
+            border-bottom: 1px solid black;
+            border-top: 1px solid #999;
+            text-align: center;
+        }
+
+        input {
+            padding: 5px 5px 5px 5px;
+            text-transform: uppercase;
+        }
+
+        input[type=text]:focus {
+            background-color: skyblue;
+        }
+
+        #name {
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 20px 100px 20px 0;
+        }
+
+        #office {
+            width: 130px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 20px 40px 20px 0;
+        }
+
+        #position {
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 1px 187px 20px 0;
+        }
+
+        #age {
+            width: 60px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 20px 20px 20px 0;
+        }
+
+        #start-date {
+            width: 130px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 20px 150px 20px 0;
+        }
+
+        #salary {
+            width: 130px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 20px 40px 20px 0;
+
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            padding: 10px 28px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Colors by position */
+
+        .green-acc {
+            background-color: #72FF33;
+        }
+
+        .red-ceo {
+            background-color: #FF0C11;
+
+        }
+
+        .greenpale {
+            background-color: #85F0A2;
+        }
+
+        .blue-softengi {
+            background-color: #75BDFF;
+        }
+
+        .integration-plum {
+            background-color: #E884D6;
+        }
+
+        .pre-sale {
+            background-color: #FFC59A;
+        }
+
+        .sales-assis {
+            background-color: #F07A69;
+        }
+
+        .javascript-dev {
+            background-color: #269460;
+        }
+
+        .regional-dir {
+            background-color: #EBE77B;
+        }
+
+        .personnel-lead {
+            background-color: #9C6135;
+        }
+
+        .cost-supp {
+            background-color: #D1EDC6;
+        }
+
+        .supp-eng {
+            background-color: #C6FFAD;
+        }
+
+        .operating-off {
+            background-color: deeppink;
+        }
+
+        .team-lead {
+            background-color: #AD368C;
+        }
+
+        .developer {
+            background-color: #C3C9C4;
+        }
+
+        .syst-admin {
+            background-color: #193DFF;
+        }
+
+        .mark-desig {
+            background-color: #FFA614;
+        }
+
+        .secretary {
+            background-color: saddlebrown;
+        }
+
+        .off-man {
+            background-color: #994B58;
+        }
+
+        .director {
+            background-color: #512391;
+        }
+
+        .dev-lead {
+            background-color: #387394;
+        }
+
+        .post-sales-sup {
+            background-color: #FFD6FE;
+        }
+
+        .financial-off {
+            background-color: #FF614A;
+        }
+
+        .supp-lead {
+            background-color: #E8CB9B;
+        }
+
+        .data-coor {
+            background-color: #774DA6;
+        }
+
+        .reg-mark {
+            background-color: antiquewhite;
+        }
+
+        .sys-arch {
+            background-color: aquamarine;
+        }
+
+        .finan-cont {
+            background-color: chocolate;
+        }
+
+        .chief-mark-off {
+            background-color: darkgreen;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>COMPANY DATABASE</h1>
+    <br>
+    <table>
+        <tr id="head">
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+
+        <tr class="green-acc">
+            <th>Airi Satou</th>
+            <th>Accountant</th>
+            <th>Tokyo</th>
+            <th>33</th>
+            <th>2008/11/28 </th>
+            <th>&#36;162,700</th>
+        </tr>
+
+        <tr class="red-ceo">
+            <th>Angelica Ramos</th>
+            <th>Chief Executive Officer (CEO)</th>
+            <th>London</th>
+            <th>47</th>
+            <th>2009/10/09</th>
+            <th>&#36;1,200,000</th>
+        </tr>
+
+        <tr class="greenpale">
+            <th>Ashton Cox</th>
+            <th>Junior Technical Author</th>
+            <th>San Francisco</th>
+            <th>66</th>
+            <th>2009/01/12</th>
+            <th>&#36;86,000</th>
+        </tr>
+
+        <tr class="blue-softengi">
+            <th>Bradley Greer</th>
+            <th>Software Engineer</th>
+            <th>London</th>
+            <th>41</th>
+            <th>2012/10/13</th>
+            <th>&#36;132,000</th>
+        </tr>
+
+        <tr class="blue-softengi">
+            <th>Brenden Wagner</th>
+            <th>Software Engineer</th>
+            <th>San Francisco</th>
+            <th>28</th>
+            <th>2011/06/07</th>
+            <th>&#36;206,850</th>
+        </tr>
+
+        <tr class="integration-plum">
+            <th>Brielle Williamson</th>
+            <th>Integration Specialist</th>
+            <th>New York</th>
+            <th>61</th>
+            <th>2012/12/02</th>
+            <th>&#36;372,000</th>
+        </tr>
+
+        <tr class="blue-softengi">
+            <th>Bruno Nash</th>
+            <th>Software Engineer</th>
+            <th>London</th>
+            <th>38</th>
+            <th>2011/05/03</th>
+            <th>&#36;163,500</th>
+        </tr>
+
+        <tr class="pre-sale">
+            <th>Caesar Vance</th>
+            <th>Pre-Sales Support</th>
+            <th>New York</th>
+            <th>21</th>
+            <th>2011/12/12</th>
+            <th>&#36;106,450</th>
+        </tr>
+
+        <tr class="sales-assis">
+            <th>Cara Stevens</th>
+            <th>Sales Assistant</th>
+            <th>New York</th>
+            <th>46</th>
+            <th>2011/12/06</th>
+            <th>&#36;145,600</th>
+        </tr>
+
+        <tr class="javascript-dev">
+            <th>Cedric Kelly</th>
+            <th>Senior Javascript Developer</th>
+            <th>Edinburgh</th>
+            <th>22</th>
+            <th>2012/03/29</th>
+            <th>&#36;433,060</th>
+        </tr>
+
+        <tr class="regional-dir">
+            <th>Charde Marshall</th>
+            <th>Regional Director</th>
+            <th>San Francisco</th>
+            <th>36</th>
+            <th>2008/10/16</th>
+            <th>&#36;470,600</th>
+        </tr>
+
+        <tr class="javascript-dev">
+            <th>Colleen Hurst</th>
+            <th>Javascript Developer</th>
+            <th>San Francisco</th>
+            <th>39</th>
+            <th>2009/09/15</th>
+            <th>&#36;205,500</th>
+        </tr>
+
+        <tr class="personnel-lead">
+            <th>Dai Rios</th>
+            <th>Personnel Lead</th>
+            <th>Edinburgh</th>
+            <th>35</th>
+            <th>2012/09/26</th>
+            <th>&#36;217,500</th>
+        </tr>
+
+        <tr class="cost-supp">
+            <th>Donna Snider</th>
+            <th>Customer Support</th>
+            <th>New York</th>
+            <th>27</th>
+            <th>2011/01/25</th>
+            <th>&#36;112,000</th>
+        </tr>
+
+        <tr class="sales-assis">
+            <th>Doris Wilder</th>
+            <th>Sales Assistant </th>
+            <th>Sidney</th>
+            <th>23</th>
+            <th>2010/09/20</th>
+            <th>&#36;85,600</th>
+        </tr>
+
+        <tr class="supp-eng">
+            <th>Finn Camacho</th>
+            <th>Support Engineer</th>
+            <th>San Francisco</th>
+            <th>47</th>
+            <th>2009/07/07</th>
+            <th>&#36;87,500</th>
+        </tr>
+
+        <tr class="operating-off">
+            <th>Fiona Green</th>
+            <th>Chief Operating Officer (COO)</th>
+            <th>San Francisco</th>
+            <th>48</th>
+            <th>2010/03/11</th>
+            <th>&#36;850,000</th>
+        </tr>
+
+        <tr class="green-acc">
+            <th>Garrett Winters</th>
+            <th>Accountant</th>
+            <th>Tokyo</th>
+            <th>63</th>
+            <th>2011/07/25</th>
+            <th>&#36;170,750</th>
+        </tr>
+
+        <tr class="team-lead">
+            <th>Gavin Cortez</th>
+            <th>Team Leader</th>
+            <th>San Francisco</th>
+            <th>22</th>
+            <th>2008/10/26</th>
+            <th>&#36;235,500</th>
+        </tr>
+
+        <tr class="developer">
+            <th>Gavin Joyce</th>
+            <th>Developer</th>
+            <th>Edinburgh</th>
+            <th>42</th>
+            <th>2010/12/22</th>
+            <th>&#36;92,575</th>
+        </tr>
+
+        <tr class="syst-admin">
+            <th>Gloria Little</th>
+            <th>Systems Administrator</th>
+            <th>New York</th>
+            <th>59</th>
+            <th>2009/04/10</th>
+            <th>&#36;237,500</th>
+        </tr>
+
+        <tr class="mark-desig">
+            <th>Haley Kennedy</th>
+            <th>Senior Marketing Designer</th>
+            <th>London</th>
+            <th>43</th>
+            <th>2012/12/18</th>
+            <th>&#36;313,500</th>
+        </tr>
+
+        <tr class="regional-dir">
+            <th>Hermione Butler</th>
+            <th>Regional Director</th>
+            <th>London</th>
+            <th>47</th>
+            <th>2011/03/21</th>
+            <th>&#36;356,250</th>
+        </tr>
+
+        <tr class="sales-assis">
+            <th>Herrod Chandler</th>
+            <th>Sales Assistant</th>
+            <th>San Francisco</th>
+            <th>59</th>
+            <th>2012/08/06</th>
+            <th>&#36;137,500</th>
+        </tr>
+
+        <tr class="secretary">
+            <th>Hope Fuentes</th>
+            <th>Secretary</th>
+            <th>San Franciso</th>
+            <th>41</th>
+            <th>2010/02/12</th>
+            <th>&#36;109,850</th>
+        </tr>
+
+        <tr class="off-man">
+            <th>Howard Hatfield</th>
+            <th>Office Manager</th>
+            <th>San Francisco</th>
+            <th>51</th>
+            <th>2008/12/16</th>
+            <th>&#36;164,500</th>
+        </tr>
+
+        <tr class="director">
+            <th>Jackson Bradshaw</th>
+            <th>Director</th>
+            <th>New York</th>
+            <th>65</th>
+            <th>2008/09/26</th>
+            <th>&#36;645,750</th>
+        </tr>
+
+        <tr class="off-man">
+            <th>Jena Gaines</th>
+            <th>Office Manager</th>
+            <th>London</th>
+            <th>30</th>
+            <th>2008/12/19</th>
+            <th>&#36;90,560</th>
+        </tr>
+
+        <tr class="dev-lead">
+            <th>Janette Caldwell</th>
+            <th>Development Lead</th>
+            <th>New York</th>
+            <th>30</th>
+            <th>2011/09/03</th>
+            <th>&#36;345,00</th>
+        </tr>
+
+        <tr class="javascript-dev">
+            <th>Jennifer Acosta Junior</th>
+            <th>Javascript Developer</th>
+            <th>Edinburgh</th>
+            <th>43</th>
+            <th>2013/02/01</th>
+            <th>&#36;75,650</th>
+        </tr>
+
+        <tr class="regional-dir">
+            <th>Jennifer Chang</th>
+            <th>Regional Director</th>
+            <th>Singapore</th>
+            <th>28</th>
+            <th>2010/11/14</th>
+            <th>&#36;357,650</th>
+        </tr>
+
+        <tr class="developer">
+            <th>Jonas Alexander</th>
+            <th>Developer</th>
+            <th>San Francisco</th>
+            <th>30</th>
+            <th>2010/07/14</th>
+            <th>&#36;86,500</th>
+        </tr>
+
+        <tr class="syst-admin">
+            <th>Lael Greer</th>
+            <th>Systems Administrator</th>
+            <th>London</th>
+            <th>21</th>
+            <th>2009/02/27</th>
+            <th>&#36;103,500</th>
+        </tr>
+
+        <tr class="post-sales-sup">
+            <th>Martena Mccray</th>
+            <th>Post-Sales Support</th>
+            <th>Edinburgh</th>
+            <th>46</th>
+            <th>2011/03/09</th>
+            <th>&#36;324,050</th>
+        </tr>
+
+        <tr class="javascript-dev">
+            <th>Michael Bruce</th>
+            <th>Javascript Developer</th>
+            <th>Singapore</th>
+            <th>29</th>
+            <th>2011/06/27</th>
+            <th>&#36;183,00</th>
+        </tr>
+
+        <tr class="mark-desig">
+            <th>Michael Silva</th>
+            <th>Marketing Designer</th>
+            <th>London</th>
+            <th>66</th>
+            <th>2012/11/27</th>
+            <th>&#36;198,500</th>
+        </tr>
+
+        <tr class="integration-plum">
+            <th>Michelle House</th>
+            <th>Integration Specialist</th>
+            <th>Sidney</th>
+            <th>37</th>
+            <th>2011/06/02</th>
+            <th>&#36;95,400</th>
+        </tr>
+
+        <tr class="supp-eng">
+            <th>Olivia Liang</th>
+            <th>Support Engineer</th>
+            <th>Singapore</th>
+            <th>64</th>
+            <th>2011/02/03</th>
+            <th>&#36;234,500</th>
+        </tr>
+
+        <tr class="financial-off">
+            <th>Paul Byrd</th>
+            <th>Chief Financial Officer (CFO)</th>
+            <th>New York</th>
+            <th>64</th>
+            <th>2010/06/09</th>
+            <th>&#36;725,000</th>
+        </tr>
+
+        <tr class="greenpale">
+            <th>Prescott Bartlett</th>
+            <th>Technical Author</th>
+            <th>London</th>
+            <th>27</th>
+            <th>2011/05/07</th>
+            <th>&#36;145,000</th>
+        </tr>
+
+        <tr class="supp-lead">
+            <th>Quinn Flynn</th>
+            <th>Support Lead</th>
+            <th>Edinburgh</th>
+            <th>22</th>
+            <th>2013/03/03</th>
+            <th>&#36;342,00</th>
+        </tr>
+
+        <tr class="integration-plum">
+            <th>Rhonda Davidson</th>
+            <th>Integration Specialist</th>
+            <th>Tokyo</th>
+            <th>55</th>
+            <th>2010/10/14</th>
+            <th>&#36;327,900</th>
+        </tr>
+
+        <tr class="supp-eng">
+            <th>Sakura Yamamoto</th>
+            <th>Support Engineer</th>
+            <th>Tokyo</th>
+            <th>37</th>
+            <th>2009/08/19</th>
+            <th>&#36;139,575</th>
+        </tr>
+
+        <tr class="data-coor">
+            <th>Serge Baldwin</th>
+            <th>Data Coordinator</th>
+            <th>Singapore</th>
+            <th>64</th>
+            <th>2012/04/09</th>
+            <th>&#36;138,575</th>
+        </tr>
+
+        <tr class="regional-dir">
+            <th>Shad Decker</th>
+            <th>Regional Director</th>
+            <th>Edinburgh</th>
+            <th>51</th>
+            <th>2008/11/13</th>
+            <th>&#36;183,000</th>
+        </tr>
+
+        <tr class="reg-mark">
+            <th>Shou Itou</th>
+            <th>Regional Marketing</th>
+            <th>Tokyo</th>
+            <th>20</th>
+            <th>2011/08/14</th>
+            <th>&#36;163,000</th>
+        </tr>
+
+        <tr class="blue-softengi">
+            <th>Sonya Frost</th>
+            <th>Software Engineer</th>
+            <th>Edinburgh</th>
+            <th>23</th>
+            <th>2008/12/13</th>
+            <th>&#36;103,600</th>
+        </tr>
+
+        <tr class="developer">
+            <th>Suki Burks</th>
+            <th>Developer</th>
+            <th>London</th>
+            <th>53</th>
+            <th>2009/10/22</th>
+            <th>&#36;114,500</th>
+        </tr>
+
+        <tr class="regional-dir">
+            <th>Tatyana Fitzpatrick</th>
+            <th>Regional Director</th>
+            <th>London</th>
+            <th>19</th>
+            <th>2010/03/17</th>
+            <th>&#36;385,750</th>
+        </tr>
+
+        <tr class="developer">
+            <th>Thor Walton</th>
+            <th>Developer</th>
+            <th>New York</th>
+            <th>61</th>
+            <th>2013/08/11</th>
+            <th>&#36;98,540</th>
+        </tr>
+
+        <tr class="sys-arch">
+            <th>Tiger Nixon</th>
+            <th>System Architect</th>
+            <th>Edinburg</th>
+            <th>61</th>
+            <th>2011/04/25</th>
+            <th>&#36;320,800</th>
+        </tr>
+
+        <tr class="off-man">
+            <th>Timothy Mooney</th>
+            <th>Office Manager</th>
+            <th>London</th>
+            <th>37</th>
+            <th>2008/12/11</th>
+            <th>&#36;136,200</th>
+        </tr>
+
+        <tr class="mark-desig">
+            <th>Unity Butler</th>
+            <th>Marketing Designer</th>
+            <th>San Francisco</th>
+            <th>47</th>
+            <th>2009/12/09</th>
+            <th>&#36;85,675</th>
+        </tr>
+
+        <tr class="finan-cont">
+            <th>Vvian Harrell</th>
+            <th>Financial Controller</th>
+            <th>San Francisco</th>
+            <th>62</th>
+            <th>2009/02/14</th>
+            <th>&#36;452,500</th>
+        </tr>
+
+        <tr class="chief-mark-off">
+            <th>Yuri Berry</th>
+            <th>Chief Marketing Officer (CMO)</th>
+            <th>New York</th>
+            <th>40</th>
+            <th>2009/06/25</th>
+            <th>&#36;675,00</th>
+        </tr>
+
+        <tr class="blue-softengi">
+            <th>Zenaida Frank</th>
+            <th>Software Engineer</th>
+            <th>New York</th>
+            <th>63</th>
+            <th>2010/01/04</th>
+            <th>&#36;125,250</th>
+        </tr>
+
+        <tr class="blue-softengi">
+            <th>Zorita Serrano</th>
+            <th>Software Engineer</th>
+            <th>San Francisco</th>
+            <th>56</th>
+            <th>2012/06/01</th>
+            <th>&#36;115,000</th>
+        </tr>
+
+    </table>
+    <br>
+    <form>
+        <h1>REGISTRATION OF NEW EMPLOYEES</h1>
+        <br>
+        FULL NAME
+        <input id="name" type="text" name="fullname">
+        OFFICE
+        <input id="office" type="text" name="office">
+        <br>
+        POSITION
+        <input id="position" type="text" name="position">
+        AGE
+        <input id="age" type="number" name="age">
+        <br>
+        START DATE
+        <input id="start-date" type="date" name="date">
+        SALARY
+        <input id="salary" type="text" name="salary">
+        <br>
+        <input type="submit" name="submit">
+        <input type="reset" name="reset">
+
+
+
+
+    </form>
+</body>
+
+</html>
